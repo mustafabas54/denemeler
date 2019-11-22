@@ -1,0 +1,30 @@
+body {
+    background: gray;
+}
+#hamburger {
+    position: fixed;
+    cursor: pointer;
+    right: 5%;
+    top: 5%;
+    transform: translate(-5%, -50%);
+    z-index: 7;
+}
+.line {
+    width: 30px;
+    height: 2px;
+    background: whitesmoke;
+    margin: 5px;
+    border-radius: 5px;
+    transition: all .5s ease-out;
+}
+.line.active-line1 {
+    transform: translate( 0, 4px) rotate(405deg);
+    top: 0;
+    transition: all .5s ease-out;
+    
+}
+.line.active-line2 {
+    transform: translate( 0, -4px) rotate(-405deg);
+    transition: all .5s ease-out;
+
+}
