@@ -2,16 +2,49 @@ body {
     margin: 0;
     padding: 0;
 }
-.slide-container {
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* slider-start-here */
+
+.slider-container {
     margin: 0;
     padding: 0;
     position: relative;
     border: 2px solid black;
     width: 100%;
     height: 450px;
-    transform: translate(-50%,-20px);
-    left: 50%;
+    overflow: hidden;
+}
+.slide {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: 1s;
+}
 
+.slide.active{
+    opacity: 1;
+    transition: 1s;
+}
+
+.slide-text {
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transition: 1s;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+}
+
+.slide-text.active{
+    opacity: 1;
+    transition: 1s;
 }
 .slide-prev-button {
     position: absolute;
@@ -46,12 +79,9 @@ body {
     background-color: rgb(34, 96, 100);
     transform: scale(1.10);
 }
-.slide-text {
-    position: absolute;
-    opacity: 1;
-    top: 20%;
-    left: 40%;
-}
+
+/* slider-ends-here */
+
 .jumbotron {
     background-color: white;
     position: relative;
@@ -94,7 +124,7 @@ ul li a:hover {
     color: tomato;
 } 
 
-img {
+.jumbotron img {
     top: 10%;
     left: 0%;
     position: absolute;
@@ -103,6 +133,7 @@ img {
     opacity: 1;
     z-index: -10;
 }
+
 ul li ul li {
         display: none;
         position: absolute;
@@ -119,13 +150,13 @@ li ul a {
     background: gray;
     border-radius: 3px;
   }
-  #mutfak {
-      
-      position: absolute;
-      transform: translate(-40%,-20%);
-      top: 0%;
-      width: 100%;
-      height: 100%;
-      left: 0;
-  }
+#mutfak {
+    
+    position: absolute;
+    transform: translate(-40%,-20%);
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    left: 0;
+}
 
