@@ -30,7 +30,7 @@ const increaseSlide = () => {
     }
 }
 
-const startSliding = () => setInterval(increaseSlide, 3000)
+const startSliding = () => setInterval(increaseSlide, 10000)
 const stopSliding = () => clearInterval(startSliding())
 
 startSliding()
